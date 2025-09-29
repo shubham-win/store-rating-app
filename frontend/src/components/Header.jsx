@@ -9,14 +9,14 @@ const Header = () => {
     navigate('/login');
   };
   return (
-    <header style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'1rem 2rem',borderBottom:'2px solid #9bd4e2ff'}}>
+    <header style={{display:'flex',background:'#f100952a',justifyContent:'space-between',alignItems:'center',padding:'1rem 2rem',borderBottom:'2px solid #9bd4e2ff',borderRadius:'10px'}}>
       <div><Link to="/" style={{textDecoration:'none',color:'#ffcf91ff',fontWeight:'bold', fontSize:'2rem'}}>Store Ratings</Link></div>
       <nav style={{display:'flex',gap:'1rem',alignItems:'center'}}>
         {user ? (
           <>
             <span style={{color:'#f79a22ff',fontWeight:'bold', fontSize:'2rem'}}>Welcome, {user.name }</span>
             <Link to="/update-password" style={{color:'#f1f1f1ff',}}>Update Password</Link>
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout} style={{background:'#c71c05ff',color:'#f1f1f1ff',padding:'0.5rem 1rem',borderRadius:'5px'}}>Logout</button>
           </>
         ) : (
           <>

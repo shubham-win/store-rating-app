@@ -22,7 +22,7 @@ const UpdatePassword = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{maxWidth:500,margin:'2rem auto',padding:20,background:'#fff',borderRadius:8}}>
+    <form onSubmit={handleSubmit} style={{maxWidth:500,margin:'2rem auto',padding:20,background:'#06060641',borderRadius:8}}>
       <h2>Update Password</h2>
       {message && <div>{message}</div>}
       <div><label>New Password</label><input type="password" value={form.password} onChange={e=>setForm({...form,password:e.target.value})} required /></div>
