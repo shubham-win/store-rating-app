@@ -14,7 +14,7 @@ const Header = () => {
       <nav style={{display:'flex',gap:'1rem',alignItems:'center'}}>
         {user ? (
           <>
-            <span style={{color:'#f79a22ff',fontWeight:'bold', fontSize:'2rem'}}>Welcome, {user.name }</span>
+            <span style={{color:'#f79a22ff',fontWeight:'bold', fontSize:'2rem',textTransform:'capitalize'}}>Welcome, {user.name }</span>
             <Link to="/update-password" style={{color:'#f1f1f1ff',}}>Update Password</Link>
             <button onClick={handleLogout} style={{background:'#c71c05ff',color:'#f1f1f1ff',padding:'0.5rem 1rem',borderRadius:'5px'}}>Logout</button>
           </>
