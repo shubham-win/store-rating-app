@@ -37,7 +37,7 @@ const SignupForm = () => {
       <div><label>Address</label><input value={form.address} onChange={e=>setForm({...form,address:e.target.value})} placeholder='Address'/></div>
       <div><label>Password</label><input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type="password" required placeholder='Password' /></div>
       <div><label>Confirm Password</label><input value={form.confirmPassword} onChange={e=>setForm({...form,confirmPassword:e.target.value})} type="password" required placeholder='Confirm Password' /></div>
-      <button type="submit">Create account</button>
+      <button type="submit" style={{padding:'10px 20px 20px 10px', textAlign:'center'}}>Create account</button>
     </form>
   );
 };

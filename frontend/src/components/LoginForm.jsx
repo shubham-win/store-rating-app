@@ -7,6 +7,7 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email:'', password:'' });
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const LoginForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} style={{maxWidth:400,margin:'2rem auto',padding:20,borderRadius:8}}>
+    <form onSubmit={handleSubmit} style={{maxWidth:600,margin:'2rem auto',padding:20,borderRadius:8}}>
       <h2>Login</h2>
       {error && <div style={{color:'red'}}>{error}</div>}
       <div>
@@ -27,7 +28,13 @@ const LoginForm = () => {
       </div>
       <div>
         <label>Password</label>
-        <input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type="password" placeholder='Password' required />
+        <div style={{display:'flex',flexDirection:'row'}}>
+          <input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type={showPassword ? "text" : "password"} placeholder='Password' required />
+          <button type="button" onClick={() => setShowPassword(!showPassword)} style={{marginLeft:10}}>
+            {showPassword ? "Hide" : "Show"}
+          </button>
+        </div>
+
       </div>
       <button type="submit">Login</button>
     </form>

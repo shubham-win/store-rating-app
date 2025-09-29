@@ -5,6 +5,7 @@ const UpdatePassword = () => {
   const { api, user } = useAuth();
   const [form, setForm] = useState({ password:'', confirmPassword:'' });
   const [message, setMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
