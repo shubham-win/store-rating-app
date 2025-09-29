@@ -18,16 +18,16 @@ const LoginForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} style={{maxWidth:400,margin:'2rem auto',padding:20,background:'#fff',borderRadius:8}}>
+    <form onSubmit={handleSubmit} style={{maxWidth:400,margin:'2rem auto',padding:20,borderRadius:8}}>
       <h2>Login</h2>
       {error && <div style={{color:'red'}}>{error}</div>}
       <div>
         <label>Email</label>
-        <input value={form.email} onChange={e=>setForm({...form,email:e.target.value})} type="email" required />
+        <input value={form.email} onChange={e=>setForm({...form,email:e.target.value})} type="email" placeholder='Email' required />
       </div>
       <div>
         <label>Password</label>
-        <input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type="password" required />
+        <input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type="password" placeholder='Password' required />
       </div>
       <button type="submit">Login</button>
     </form>

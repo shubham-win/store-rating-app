@@ -73,7 +73,7 @@ const UserList = () => {
           <option value="store_owner">Store Owner</option>
         </select>
       </div>
-      <table style={{width:'100%'}}>
+      <table border={2} cellPadding={6}  style={{width:'100%',borderCollapse:'collapse',marginTop:10, textAlign:'center'}}>
         <thead><tr>
           <th>Name</th>
           <th>Email</th>

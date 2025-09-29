@@ -73,7 +73,7 @@ const StoreList = ({ userRole }) => {
         <h2>Stores</h2>
         <input placeholder="Search" value={search} onChange={e=>setSearch(e.target.value)} />
       </div>
-      <table style={{width:'100%',borderCollapse:'collapse',marginTop:10}}>
+      <table border={2} cellPadding={6} style={{width:'100%',borderCollapse:'collapse',marginTop:10, textAlign:'center'}}>
         <thead><tr>
           <th onClick={()=>toggleSort('name')}>Name</th>
           <th onClick={()=>toggleSort('email')}>Email</th>

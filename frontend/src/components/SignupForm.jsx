@@ -29,14 +29,14 @@ const SignupForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{maxWidth:500,margin:'2rem auto',padding:20,background:'#fff',borderRadius:8}}>
+    <form onSubmit={handleSubmit} style={{maxWidth:500,margin:'2rem auto',padding:20,borderRadius:8}}>
       <h2>Sign up</h2>
       {error && <div style={{color:'red'}}>{error}</div>}
-      <div><label>Name</label><input value={form.name} onChange={e=>setForm({...form,name:e.target.value})} required /></div>
-      <div><label>Email</label><input value={form.email} onChange={e=>setForm({...form,email:e.target.value})} type="email" required /></div>
-      <div><label>Address</label><textarea value={form.address} onChange={e=>setForm({...form,address:e.target.value})} /></div>
-      <div><label>Password</label><input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type="password" required /></div>
-      <div><label>Confirm Password</label><input value={form.confirmPassword} onChange={e=>setForm({...form,confirmPassword:e.target.value})} type="password" required /></div>
+      <div><label>Name</label><input value={form.name} onChange={e=>setForm({...form,name:e.target.value})} required placeholder='Name'/></div>
+      <div><label>Email</label><input value={form.email} onChange={e=>setForm({...form,email:e.target.value})} type="email" required placeholder='Email' /></div>
+      <div><label>Address</label><input value={form.address} onChange={e=>setForm({...form,address:e.target.value})} placeholder='Address'/></div>
+      <div><label>Password</label><input value={form.password} onChange={e=>setForm({...form,password:e.target.value})} type="password" required placeholder='Password' /></div>
+      <div><label>Confirm Password</label><input value={form.confirmPassword} onChange={e=>setForm({...form,confirmPassword:e.target.value})} type="password" required placeholder='Confirm Password' /></div>
       <button type="submit">Create account</button>
     </form>
   );

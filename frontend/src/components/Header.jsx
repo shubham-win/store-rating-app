@@ -9,19 +9,19 @@ const Header = () => {
     navigate('/login');
   };
   return (
-    <header style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'1rem 2rem',background:'#fff',borderBottom:'1px solid #eee'}}>
-      <div><Link to="/" style={{textDecoration:'none',color:'#007bff',fontWeight:'bold'}}>Store Ratings</Link></div>
+    <header style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'1rem 2rem',borderBottom:'2px solid #9bd4e2ff'}}>
+      <div><Link to="/" style={{textDecoration:'none',color:'#ffcf91ff',fontWeight:'bold', fontSize:'2rem'}}>Store Ratings</Link></div>
       <nav style={{display:'flex',gap:'1rem',alignItems:'center'}}>
         {user ? (
           <>
-            <span>Welcome, {user.name}</span>
-            <Link to="/update-password">Update Password</Link>
+            <span style={{color:'#f79a22ff',fontWeight:'bold', fontSize:'2rem'}}>Welcome, {user.name }</span>
+            <Link to="/update-password" style={{color:'#f1f1f1ff',}}>Update Password</Link>
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign Up</Link>
+            <Link to="/login" style={{textDecoration:'none',color:'#ff9900ff',fontWeight:'bold'}}>Login</Link>
+            <Link to="/signup" style={{textDecoration:'none',color:'#ff9900ff',fontWeight:'bold'}}>Sign Up</Link>
           </>
         )}
       </nav>

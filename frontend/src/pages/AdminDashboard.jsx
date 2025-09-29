@@ -57,14 +57,14 @@ const AdminDashboard = () => {
       {error && <div style={{color:'red'}}>{error}</div>}
       {stats && (
         <div style={{display:'flex',gap:10,marginBottom:20}}>
-          <div style={{padding:10,background:'#fff',borderRadius:8}}>Total Users: {stats.totalUsers}</div>
-          <div style={{padding:10,background:'#fff',borderRadius:8}}>Total Stores: {stats.totalStores}</div>
-          <div style={{padding:10,background:'#fff',borderRadius:8}}>Total Ratings: {stats.totalRatings}</div>
+          <div style={{padding:10,background:'#ffffff52',borderRadius:8}}>Total Users: {stats.totalUsers}</div>
+          <div style={{padding:10,background:'#ffffff52',borderRadius:8}}>Total Stores: {stats.totalStores}</div>
+          <div style={{padding:10,background:'#ffffff52',borderRadius:8}}>Total Ratings: {stats.totalRatings}</div>
         </div>
       )}
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
-        <div style={{background:'#fff',padding:10,borderRadius:8}}>
-          <h3>Create User</h3>
+        <div style={{background:'#ffc67c52',padding:10,borderRadius:8,}}>
+          <h3 style={{color:'#cccf00ff',fontSize:40}}>Create User</h3>
           <form onSubmit={createUser} style={{display:'flex',flexDirection:'column',gap:8}}>
             <input placeholder="Name" value={userForm.name} onChange={e=>setUserForm({...userForm,name:e.target.value})} required />
             <input placeholder="Email" type="email" value={userForm.email} onChange={e=>setUserForm({...userForm,email:e.target.value})} required />
@@ -79,8 +79,8 @@ const AdminDashboard = () => {
           </form>
         </div>
 
-        <div style={{background:'#fff',padding:10,borderRadius:8}}>
-          <h3>Create Store</h3>
+        <div style={{background:'#ffc67c52',padding:10,borderRadius:8}}>
+          <h3 style={{color:'#4b3922ff',fontSize:40}}>Create Store</h3>
           <form onSubmit={createStore} style={{display:'flex',flexDirection:'column',gap:8}}>
             <input placeholder="Store Name" value={storeForm.name} onChange={e=>setStoreForm({...storeForm,name:e.target.value})} required />
             <input placeholder="Email" type="email" value={storeForm.email} onChange={e=>setStoreForm({...storeForm,email:e.target.value})} />
@@ -94,13 +94,13 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginTop:20}}>
-        <div style={{background:'#fff',padding:10,borderRadius:8}}>
-          <h3>Stores</h3>
+      <div style={{display:'flex',flexDirection:'column',gap:20,marginTop:20}}>
+        <div style={{background:'#f09db952',padding:10,borderRadius:8}}>
+          <h3 style={{color:'#4f068aff',fontSize:40}}>Stores</h3>
           <StoreList userRole="admin" />
         </div>
-        <div style={{background:'#fff',padding:10,borderRadius:8}}>
-          <h3>Users</h3>
+        <div style={{background:'#f09db952',padding:10,borderRadius:8}}>
+          <h3 style={{color:'#801c1cff',fontSize:40}}>Users</h3>
           <UserList />
         </div>
       </div>

@@ -22,14 +22,14 @@ const StoreOwnerDashboard = () => {
       <h2>Your Store(s)</h2>
       {error && <div style={{color:'red'}}>{error}</div>}
       {data.stores.map(s => (
-        <div key={s.id} style={{padding:10,background:'#fff',marginBottom:10,borderRadius:8}}>
-          <h3>{s.name}</h3>
+        <div key={s.id} style={{padding:10,background:'#ffffff56',marginBottom:10,borderRadius:8, display:'flex',flexDirection:'row',justifyContent:'space-between', alignItems:'center' }}>
+          <h3 style={{fontSize:22}}>{s.name}</h3>
           <p>Average Rating: {s.average_rating || 'No ratings'}</p>
         </div>
       ))}
       <h3>Ratings</h3>
       {data.ratings.length===0 ? <p>No ratings yet</p> : (
-        <table style={{width:'100%'}}>
+        <table border={2} cellPadding={6} style={{width:'100%',borderCollapse:'collapse',marginTop:10, textAlign:'center'}}>
           <thead><tr><th>User</th><th>Email</th><th>Rating</th><th>Date</th></tr></thead>
           <tbody>
             {data.ratings.map(r => (

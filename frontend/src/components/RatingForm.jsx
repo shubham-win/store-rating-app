@@ -20,7 +20,7 @@ const RatingForm = ({ storeId, onRatingSubmit }) => {
   };
 
   return (
-    <form onSubmit={submit} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:8}}>
+    <form onSubmit={submit} style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',gap:2}}>
       <div style={{display:'flex',gap:6}}>
         {[1,2,3,4,5].map(s => (
           <label key={s} style={{cursor:'pointer'}}>
