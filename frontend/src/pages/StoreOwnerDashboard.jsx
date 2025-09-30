@@ -29,7 +29,7 @@ const StoreOwnerDashboard = () => {
       ))}
       <h3>Ratings</h3>
       {data.ratings.length===0 ? <p>No ratings yet</p> : (
-        <table border={2} cellPadding={6} style={{width:'100%',borderCollapse:'collapse',marginTop:10, textAlign:'center'}}>
+        <table border={2} cellPadding={6} style={{width:'100%',borderCollapse:'collapse',marginTop:10, textAlign:'center', border:'1px solid #c2f2cc'}}>
           <thead><tr><th>User</th><th>Email</th><th>Rating</th><th>Date</th></tr></thead>
           <tbody>
             {data.ratings.map(r => (
